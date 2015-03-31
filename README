@@ -1,0 +1,30 @@
+This is a tar/gzip self-extraction utility for DOS written by Nathan Banks.
+
+It was written using the Netwide Assembler (nasm) version 0.97 for DOS.  It
+is also, unfortuantely, fairly picky about what version of tar may be used,
+and I haven't had the inclination to improve its compatibility.  It was 
+designed around tar version 1.12, and gzip version 1.2.4, both of which 
+were compiled for DOS and are included with the distribution.
+
+Usage:
+  tar cvf <somefile.tar> <files-to-compress>
+  gzip <somefile.tar>
+  ren <somefile.taz> <somefile.tgz>
+  makesfx <somefile>
+
+The resulting self extracting archive will add 2.2K to the size of the 
+executable, and will extract the archive faster than the DOS tar/gzip.
+
+For Bonus Points:
+This uses a DOS call to figure out what the path to the executing file is,
+however some early versions of DOS don't allow an executing file to say
+what it's name is.  In this case, a 13 byte file, such as noname.txt, may
+be used to give the name of the file to be extracted.  This 13 bytes should
+replace the last 13 bytes of the exe and precede any self-extraction
+information.
+
+Compilation:
+  \path2nasm\nasm -i\path2nasm\misc\ untgz
+
+The include should be the path to the exebin.mac file which is part of the
+nasm distribution.

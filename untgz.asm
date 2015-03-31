@@ -1,5 +1,11 @@
-; Copyright (C) Lux Software Scriptorium Inc.  All rights reserved.
+; Copyright (C) Nathan Banks 1999
 ; Written by Nathan Banks
+; This product has a dual license:
+;    It is released under the GNU General Public License V 3.0
+;    You may incorporate it into any GPLv3 compatible product.
+
+;    If the GPL is too restrictive for your application, you may also purchase
+;    a commercial license from Nathan Banks.
 
 ; This is a gnu-zip decompressor.  This compressor uses the deflate alogrithm,
 ; which is a very nice implementation of an LZ77 (Lempel-Ziv 1977) sliding
